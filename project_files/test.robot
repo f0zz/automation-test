@@ -1,7 +1,6 @@
 ***Settings***
 Library     Selenium2Library
+Resource    resource.robot
 
 ***Test Cases***
-Open Site in Google Chrome
-    [arguments]     ${url}
-    Open Browser    http://www.google.com    browser=gc
+Open Browser Using Chrome    http://www.google.com
