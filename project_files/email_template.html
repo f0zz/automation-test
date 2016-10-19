@@ -1,0 +1,43 @@
+<html>
+<h1 style="text-decoration: underline">Siterra Regression Build #${BUILD_NUMBER} Results: ${BUILD_STATUS}</h1>
+<section style="Font-family: Arial, sans-serif; border-bottom: 1px solid black">
+    <h4>Robot Test Results</h4>
+    <p>
+        <table style="padding: 10px; text-align: center; display: inline">
+            <tr>
+                <th style="padding: 3px"></th>
+                <th style="padding: 3px">Total</th>
+                <th style="padding: 3px">Pass</th>
+                <th style="padding: 3px">Fail</th>
+                <th style="padding: 3px">Pass %</th>
+            </tr>
+            <tr>
+                <td>Critical Tests</td>
+                <td style="padding: 3px; border-bottom: 1px solid black; border-right: 1px solid black">${ROBOT_TOTAL, onlyCritical=true}</td>
+                <td style="padding: 3px; border-bottom: 1px solid black; border-right: 1px solid black; color: green">${ROBOT_PASSED, onlyCritical=true}</td>
+                <td style="padding: 3px; border-bottom: 1px solid black; border-right: 1px solid black; color: red">${ROBOT_FAILED, onlyCritical=true}</td>
+                <td style="padding: 3px; border-bottom: 1px solid black">${ROBOT_PASSPERCENTAGE, onlyCritical=true}</td>
+            <tr>
+                <td>All Tests</td>
+                <td style="padding: 3px; border-right: 1px solid black">${ROBOT_TOTAL}</td>
+                <td style="padding: 3px; border-right: 1px solid black; color: green">${ROBOT_PASSED}</td>
+                <td style="padding: 3px; border-right: 1px solid black; color: red">${ROBOT_FAILED}</td>
+                <td>${ROBOT_PASSPERCENTAGE}</td>
+            </tr>
+        </table>
+    </p>
+    <h4>Failed Test Cases</h4>
+    <p>${ROBOT_FAILEDCASES}</p>
+    <p><a href=${ROBOT_REPORTLINK}>Link to Robot Report</a></p>
+</section>
+<section style="Font-family: Arial, sans-serif; border-bottom: 1px solid black">
+    <h4>Build Log</h4>
+    <div>
+    <p>${BUILD_LOG}</p>
+    </div>
+</section>
+<section style="Font-family: Arial, sans-serif; border-bottom: 1px solid black">
+    <h4>Changes Since Last Build</h4>
+    <p>${CHANGES_SINCE_LAST_BUILD}</p>
+</section>
+</html>
