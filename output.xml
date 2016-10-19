@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20161018 20:19:49.729" generator="Robot 3.0 (Python 2.7.12 on darwin)">
-<suite source="/Users/mlgiardina/Projects/python/automation/basic-test/test.robot" id="s1" name="Test">
-<test id="s1-t1" name="Open Site in Google Chrome">
+<robot generated="20161018 21:47:40.640" generator="Robot 3.0 (Python 2.7.12 on darwin)">
+<suite source="/Users/mlgiardina/Projects/python/automation/basic-test/project_files/test.robot" id="s1" name="Test">
+<test id="s1-t1" name="Go To Google">
+<kw name="Open Browser Using Chrome" library="resource">
+<arguments>
+<arg>http://www.google.com</arg>
+</arguments>
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
-<arg>http://www.google.com</arg>
+<arg>${url}</arg>
 <arg>browser=gc</arg>
 </arguments>
-<msg timestamp="20161018 20:19:49.810" level="INFO">Opening browser 'gc' to base url 'http://www.google.com'</msg>
-<status status="PASS" endtime="20161018 20:19:53.655" starttime="20161018 20:19:49.810"></status>
+<msg timestamp="20161018 21:47:40.721" level="INFO">Opening browser 'gc' to base url 'http://www.google.com'</msg>
+<status status="PASS" endtime="20161018 21:47:44.065" starttime="20161018 21:47:40.720"></status>
 </kw>
-<status status="PASS" endtime="20161018 20:19:53.655" critical="yes" starttime="20161018 20:19:49.809"></status>
+<status status="PASS" endtime="20161018 21:47:44.065" starttime="20161018 21:47:40.720"></status>
+</kw>
+<status status="PASS" endtime="20161018 21:47:44.065" critical="yes" starttime="20161018 21:47:40.720"></status>
 </test>
-<status status="PASS" endtime="20161018 20:19:53.656" starttime="20161018 20:19:49.733"></status>
+<status status="PASS" endtime="20161018 21:47:44.066" starttime="20161018 21:47:40.643"></status>
 </suite>
 <statistics>
 <total>
