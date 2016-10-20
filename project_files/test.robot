@@ -6,7 +6,3 @@ Resource    resource.robot
 
 Go To Google
     Open Browser Using Chrome   http://www.google.com
-
-ABCDEFG
-    Open Browser Using Chrome   http://www.google.com
-    Click Element    xpath=//h3[@id='wow']
