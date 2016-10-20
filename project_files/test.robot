@@ -7,7 +7,7 @@ Resource    resource.robot
 Go To Google
     Open Browser Using Chrome   http://www.google.com
 
-This Should Fail
-    Open Browser Using Chrome   http://www.google.compile
+ABCDEFG
+    Open Browser Using Chrome   http://www.google.com
     Set Selenium Timeout    10
     Wait Until Page Contains Element    xpath=//h3[@id='wow']
