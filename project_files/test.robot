@@ -8,4 +8,4 @@ Go To Google
 
 This Should Fail
     Open Browser Using Chrome   http://www.google.compile
-    Wait Until Page Contains Element    xpath=//h3[@id='wow']
+    Wait Until Page Contains Element    xpath=//h3[@id='wow']   10s
