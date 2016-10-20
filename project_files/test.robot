@@ -9,5 +9,4 @@ Go To Google
 
 ABCDEFG
     Open Browser Using Chrome   http://www.google.com
-    Set Selenium Timeout    10
-    Wait Until Page Contains Element    xpath=//h3[@id='wow']
+    Click Element    xpath=//h3[@id='wow']
