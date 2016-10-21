@@ -14,3 +14,15 @@ Go To Yahoo
 Go To Blah
     Open Browser Using Chrome   http://www.yahoo.com
     Element Should Be Visible   xpath=//h3[@id='wow']
+
+Test 1
+    Open Browser Using Chrome   http://www.google.com
+
+Test 2
+    Open Browser Using Chrome   http://www.google.com
+
+Test 3
+    Open Browser Using Chrome   http://www.google.com
+
+Test 4
+    Open Browser Using Chrome   http://www.google.com
