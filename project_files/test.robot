@@ -10,3 +10,7 @@ Go To Google
 Go To Yahoo
     Open Browser Using Chrome   http://www.yahoo.com
     Element Should Be Visible   xpath=//h3[@id='wow']
+
+Go To Blah
+    Open Browser Using Chrome   http://www.yahoo.com
+    Element Should Be Visible   xpath=//h3[@id='wow']
