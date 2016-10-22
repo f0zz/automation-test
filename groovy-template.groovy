@@ -42,7 +42,7 @@ TD.console { font-family:Courier New; }
   <TR><TD>Job duration:</TD><TD>${build.durationString}</TD></TR>
 </TABLE>
 <BR/>
-
+<p><img src="http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=fail&rating=g"/></p>
 <%
 def robotResults = false
 def actions = build.actions // List<hudson.model.Action>
