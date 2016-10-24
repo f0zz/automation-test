@@ -7,7 +7,13 @@ Suite Teardown      Close All Browsers
 Go To Google
     Open Browser Using Chrome   http://www.google.com
 
+Go To Yahoo
+    Open Browser Using Chrome   http://www.yahoo.com
+    Element Should Be Visible   xpath=//h3[@id='wow']
 
+Go To Blah
+    Open Browser Using Chrome   http://www.yahoo.com
+    Element Should Be Visible   xpath=//h3[@id='wow']
 
 Test 1
     Open Browser Using Chrome   http://www.google.com
