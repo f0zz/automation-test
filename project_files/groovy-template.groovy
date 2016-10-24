@@ -80,43 +80,17 @@ actions.each() { action ->
 <tr class="headerRow">
   <td><b>Test Name</b></td>
   <td><b>Status</b></td>
-  <td><b>Execution Datetime</b></td>
 </tr>
 </thead>
 <tbody>
-<%  def suites = action.result.allSuites
-    suites.each() { suite ->
-      def currSuite = suite
-      def suiteName = currSuite.displayName
-      // ignore top 2 elements in the structure as they are placeholders
-      while (currSuite.parent != null && currSuite.parent.parent != null) {
-        currSuite = currSuite.parent
-        suiteName = currSuite.displayName + "." + suiteName
-      } %>
-      <%if (!allPassed(suite.caseResults)) { %>
-        <tr><td colspan="3"><b><%= suiteName %></b></td></tr>
-        <%    DateFormat format = new SimpleDateFormat("yyyyMMdd HH:mm:ss.SS")
-              def execDateTcPairs = []
-              suite.caseResults.each() { tc ->
-                Date execDate = format.parse(tc.starttime)
-                execDateTcPairs << [execDate, tc]
-              }
-              // primary sort execDate, secondary displayName
-              execDateTcPairs = execDateTcPairs.sort{ a,b -> a[1].displayName <=> b[1].displayName }
-              execDateTcPairs = execDateTcPairs.sort{ a,b -> a[0] <=> b[0] }
-              execDateTcPairs.each() {
-                def execDate = it[0]
-                def tc = it[1]  %>
-                <% if (!tc.isPassed()) { %>
-                    <tr>
-                      <td><%= tc.displayName %></td>
-                      <td style="color: #FF3333">tc.failed</td>
-                      <td><%= execDate %></td>
-                    </tr>
-        <%      }
-              } // tests
-      }
-    } %>// suites
+<% def failedResults = action.getResult().getAllFailedCases()
+    failedResults.each { test ->
+        def currTest = test %>
+        <tr>
+          <td><%= currTest.displayName %></td>
+          <td style="color: #FF3333">FAIL</td>
+        </tr>
+    <%}%>
 </tbody></table>
 <p><a href="${rooturl}${build.url}robot-plugin/report.html">Detailed Report</a></p>
 <%
