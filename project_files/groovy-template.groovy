@@ -116,7 +116,7 @@ actions.each() { action ->
         <%      }
               } // tests
       }
-    } // suites %>
+    } %>// suites 
 </tbody></table>
 <p><a href="${rooturl}${build.url}robot-plugin/report.html">Detailed Report</a></p>
 <%
