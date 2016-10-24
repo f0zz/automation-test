@@ -110,13 +110,13 @@ actions.each() { action ->
                 <% if (!tc.isPassed()) { %>
                     <tr>
                       <td><%= tc.displayName %></td>
-                      <td style="color: #FF3333">FAIL</td>
+                      <td style="color: #FF3333">tc.failed</td>
                       <td><%= execDate %></td>
                     </tr>
         <%      }
               } // tests
       }
-    } %>// suites 
+    } %>// suites
 </tbody></table>
 <p><a href="${rooturl}${build.url}robot-plugin/report.html">Detailed Report</a></p>
 <%
