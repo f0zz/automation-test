@@ -5,31 +5,31 @@ Suite Teardown      Close All Browsers
 ***Test Cases***
 
 Go To Google
-[Tags]      @mgiardina
+    [Tags]      @mgiardina
     Open Browser Using Chrome   http://www.google.com
 
 Go To Yahoo
-[Tags]      @acalandra
+    [Tags]      @acalandra
     Open Browser Using Chrome   http://www.yahoo.com
     Element Should Be Visible   xpath=//h3[@id='wow']
 
 Go To Blah
-[Tags]      @cscarborough
+    [Tags]      @cscarborough
     Open Browser Using Chrome   http://www.yahoo.com
     Element Should Be Visible   xpath=//h3[@id='wow']
 
 Test 1
-[Tags]      @jochoa
+    [Tags]      @jochoa
     Open Browser Using Chrome   http://www.google.com
 
 Test 2
-[Tags]      @dhaecker
+    [Tags]      @dhaecker
     Open Browser Using Chrome   http://www.google.com
 
 Test 3
-[Tags]      @jmartinez
+    [Tags]      @jmartinez
     Open Browser Using Chrome   http://www.google.com
 
 Test 4
-[Tags]      @rhendrickson
+    [Tags]      @rhendrickson
     Open Browser Using Chrome   http://www.google.com
